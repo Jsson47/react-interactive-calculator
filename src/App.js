@@ -1,6 +1,6 @@
 import './App.css';
 import BannerLogo from './img/banner-custom.png';
-
+import Button from './components/Button';
 
 function App() {
   return (
@@ -12,7 +12,13 @@ function App() {
           alt='Banner del Princio de la Aplicación' />
       </div>
       <div className='calculator-container'> 
-
+        <div className='fila'>
+          <Button>1</Button>
+        </div>
+        <div className='fila'></div>
+        <div className='fila'></div>
+        <div className='fila'></div>
+        <div className='fila'></div>
       </div>
     </div>
   );
