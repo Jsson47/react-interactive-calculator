@@ -11,6 +11,9 @@ function App() {
           className='banner-logo'
           alt='Banner del Princio de la Aplicación' />
       </div>
+      <div className='calculator-container'> 
+
+      </div>
     </div>
   );
 }
