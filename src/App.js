@@ -14,6 +14,7 @@ function App() {
       <div className='calculator-container'> 
         <div className='fila'>
           <Button>1</Button>
+          <Button>+</Button>
         </div>
         <div className='fila'></div>
         <div className='fila'></div>
@@ -25,3 +26,5 @@ function App() {
 }
 
 export default App;
+
+/* para nuestro Button tenemos dos clases, Button-container y operator para aquellos que representen un operador*/
