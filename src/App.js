@@ -4,6 +4,7 @@ import Button from './components/Button';
 import Screen from './components/Screen';
 import ButtonClear from './components/ButtonClear';
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
   // useState es un Hook que nos permite añadir el estado de la aplicación
@@ -14,6 +15,17 @@ function App() {
   const addToInput = val => {
     setInput(input + val);
   }
+
+  const calculate = () => {
+    // evaluate es una función que evalua una expresión
+    // evaluate("2+2") => 4
+    // evaluate("2*2") => 4
+    // evaluate("2/2") => 1
+    // evaluate("2-2") => 0
+    // evaluate("2+2*2") => 6
+    // evaluate("2+2/2") => 3
+    setInput(evaluate(input) || "");
+  };
 
   return (
     <div className="App">
@@ -44,7 +56,7 @@ function App() {
           <Button clickOperator={addToInput}>*</Button>
         </div>
         <div className='fila'>
-          <Button clickOperator={addToInput}>=</Button>
+          <Button clickOperator={calculate}>=</Button>
           <Button clickOperator={addToInput}>0</Button>
           <Button clickOperator={addToInput}>.</Button>
           <Button clickOperator={addToInput}>/</Button>
