@@ -21,7 +21,7 @@ function App() {
       setInput(evaluate(input));
     } else {
       alert("Please enter an operation");
-    }
+    };
     
   };
   // evaluate es una función que evalua una expresión
