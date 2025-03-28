@@ -17,15 +17,20 @@ function App() {
   }
 
   const calculate = () => {
-    // evaluate es una función que evalua una expresión
+    if (input) {
+      setInput(evaluate(input));
+    } else {
+      alert("Please enter an operation");
+    }
+    
+  };
+  // evaluate es una función que evalua una expresión
     // evaluate("2+2") => 4
     // evaluate("2*2") => 4
     // evaluate("2/2") => 1
     // evaluate("2-2") => 0
     // evaluate("2+2*2") => 6
     // evaluate("2+2/2") => 3
-    setInput(evaluate(input) || "");
-  };
 
   return (
     <div className="App">
