@@ -6,6 +6,8 @@ import ButtonClear from './components/ButtonClear';
 import { useState } from 'react';
 
 function App() {
+  // useState es un Hook que nos permite añadir el estado de la aplicación
+
 
   const [input, setInput] = useState("");
   
@@ -48,7 +50,8 @@ function App() {
           <Button clickOperator={addToInput}>/</Button>
         </div>
         <div className='fila'>
-          <ButtonClear>
+          <ButtonClear
+            operatorClear={() => setInput("")}>
             Clear
           </ButtonClear>
         </div>
