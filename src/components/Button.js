@@ -9,7 +9,8 @@ function Button(props) { /* esOperator retorna true o false */
 
   return (
     <div
-      className={`button-container ${isOperator(props.children) ? "operator" : null }`}> 
+      className={`button-container ${isOperator(props.children) ? "operator" : ''}`.trimEnd()}
+      onClick={() => props.clickOperator(props.children)}>  
       {props.children}
     </div>
   );

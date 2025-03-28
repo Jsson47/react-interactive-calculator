@@ -24,28 +24,28 @@ function App() {
       <div className='calculator-container'> 
         <Screen input={input}/>
         <div className='fila'>
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button>+</Button>  
+          <Button clickOperator={addToInput}>1</Button>
+          <Button clickOperator={addToInput}>2</Button>
+          <Button clickOperator={addToInput}>3</Button>
+          <Button clickOperator={addToInput}>+</Button>  
         </div>
         <div className='fila'>
-          <Button>4</Button>
-          <Button>5</Button>
-          <Button>6</Button>
-          <Button>-</Button>
+          <Button clickOperator={addToInput}>4</Button>
+          <Button clickOperator={addToInput}>5</Button>
+          <Button clickOperator={addToInput}>6</Button>
+          <Button clickOperator={addToInput}>-</Button>
         </div>
         <div className='fila'>
-          <Button>7</Button>
-          <Button>8</Button>
-          <Button>9</Button>
-          <Button>*</Button>
+          <Button clickOperator={addToInput}>7</Button>
+          <Button clickOperator={addToInput}>8</Button>
+          <Button clickOperator={addToInput}>9</Button>
+          <Button clickOperator={addToInput}>*</Button>
         </div>
         <div className='fila'>
-          <Button>=</Button>
-          <Button>0</Button>
-          <Button>.</Button>
-          <Button>/</Button>
+          <Button clickOperator={addToInput}>=</Button>
+          <Button clickOperator={addToInput}>0</Button>
+          <Button clickOperator={addToInput}>.</Button>
+          <Button clickOperator={addToInput}>/</Button>
         </div>
         <div className='fila'>
           <ButtonClear>
