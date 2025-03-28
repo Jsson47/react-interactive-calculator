@@ -4,10 +4,8 @@ import "../CSS/Button.css";
 function Button(props) { /* esOperator retorna true o false */
 
   const isOperator = val => { /* 3 criterios especificos */
-
-    return isNaN(val) && (val != ".") && (val != "=")  /* si no es un numero y no es un punto */
-    
-  };
+    return isNaN(val) && (val !== ".") && (val !== "=");  /* si no es un numero y no es un punto */ 
+  }
 
   return (
     <div
