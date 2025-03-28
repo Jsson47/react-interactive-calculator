@@ -2,9 +2,17 @@ import './App.css';
 import BannerLogo from './img/banner-custom.png';
 import Button from './components/Button';
 import Screen from './components/Screen';
-
+import ButtonClear from './components/ButtonClear';
+import { useState } from 'react';
 
 function App() {
+
+  const [input, setInput] = useState("");
+  
+  const addToInput = val => {
+    setInput(input + val);
+  }
+
   return (
     <div className="App">
       <div className="banner-logo-container">
@@ -14,7 +22,7 @@ function App() {
           alt='Banner del Princio de la Aplicación' />
       </div>
       <div className='calculator-container'> 
-        <Screen />
+        <Screen input={input}/>
         <div className='fila'>
           <Button>1</Button>
           <Button>2</Button>
@@ -39,7 +47,11 @@ function App() {
           <Button>.</Button>
           <Button>/</Button>
         </div>
-        <div className='fila'></div>
+        <div className='fila'>
+          <ButtonClear>
+            Clear
+          </ButtonClear>
+        </div>
       </div>
     </div>
   );
